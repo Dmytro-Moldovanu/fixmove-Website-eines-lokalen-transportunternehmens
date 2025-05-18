@@ -99,8 +99,9 @@
         </div>
     </header>
 
-    <section id="services" class="py-5">
-        <div class="container">
+    <section id="services" class="py-5 position-relative">
+        <div class="bg-image-overlay"></div>
+        <div class="container position-relative">
             <h2 class="text-center mb-5">Unsere Dienstleistungen</h2>
             <div class="row justify-content-around">
                 <!-- Левый коллаж (мотоциклы) -->
@@ -158,6 +159,52 @@
             </div>
         </div>
     </section>
+
+    <style>
+        /* Стили для секции с фоновым изображением */
+        #services {
+            background-image: url("{{ url_for('static', filename='images/deny-hill-L6bSCwg_gT8-unsplash.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        .bg-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* 70% видимость фона, 30% темный оверлей */
+            z-index: 0;
+        }
+        
+        #services .container {
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: none;
+        }
+        
+        /* Изменяем цвет заголовков на белый для контраста */
+        #services h2, 
+        #services h4 {
+            color: white;
+        }
+        
+        /* Белый цвет для текста на темном фоне */
+        #services .service-content p {
+            color: white !important;
+            font-weight: 500;
+        }
+        
+        /* Немного увеличиваем контрастность для карточек */
+        .fan-photo-item img {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 
     <!-- Новая секция для Möbeltaxi и Umzüge -->
     <section id="moebeltaxi" class="py-5 moebel-section section-padding">
