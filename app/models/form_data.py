@@ -17,6 +17,7 @@ class ContactFormData:
     pickup_date: str
     pickup_time: str
     loader: bool
+    email: Optional[str] = None
     notes: Optional[str] = None
     photo_paths: List[str] = None
     
@@ -37,6 +38,7 @@ class ContactFormData:
         return {
             'name': self.name,
             'phone': self.phone,
+            'email': self.email,
             'description': self.description,
             'pickup_address': self.pickup_address,
             'delivery_address': self.delivery_address,

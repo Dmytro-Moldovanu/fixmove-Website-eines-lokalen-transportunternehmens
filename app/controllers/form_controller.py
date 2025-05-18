@@ -1,7 +1,7 @@
 """
 Контроллер для обработки отправленных форм
 """
-from flask import Blueprint, request, current_app, redirect, url_for, flash, render_template
+from flask import Blueprint, request, current_app, redirect, url_for, flash, render_template, jsonify
 from app.models.form_data import ContactFormData
 from app.utils.file_handlers import save_uploaded_files
 from app.services.form_service import FormService
@@ -21,6 +21,7 @@ def submit():
         # Получаем данные формы
         name = request.form.get('name')
         phone = request.form.get('phone')
+        email = request.form.get('email')  # Получаем email (может быть пустым)
         description = request.form.get('description')
         pickup_address = request.form.get('pickup_address')
         delivery_address = request.form.get('delivery_address')
@@ -37,6 +38,7 @@ def submit():
         form_data = ContactFormData(
             name=name,
             phone=phone,
+            email=email,
             description=description,
             pickup_address=pickup_address,
             delivery_address=delivery_address,
@@ -47,10 +49,14 @@ def submit():
             photo_paths=uploaded_files
         )
         
-        # Обрабатываем данные формы через сервисный слой
-        success = FormService.process_form_data(form_data)
+        # Логируем данные для отладки
+        print(f"Получены данные от {form_data.name} ({form_data.phone})")
+        if form_data.email:
+            print(f"Email для обратной связи: {form_data.email}")
+        print(f"Перевозка от {form_data.pickup_address} до {form_data.delivery_address}")
+        print(f"Дата и время: {form_data.pickup_date} {form_data.pickup_time}")
         
-        if success:
-            return 'Anfrage erfolgreich gesendet!'
-        else:
-            return 'Bei der Bearbeitung Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.' 
+        # Email теперь отправляется через JavaScript, поэтому здесь только сохраняем данные
+        # Здесь можно добавить сохранение данных в базу данных, если нужно
+        
+        return "Anfrage erfolgreich verarbeitet!" 
