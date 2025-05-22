@@ -495,6 +495,20 @@
             transform-origin: left bottom !important;
             transform: translateY(-80%) !important;
         }
+        
+        /* Коррекция позиции SVG для больших экранов */
+        @media (min-width: 1920px) {
+            #moebeltaxi #heavyBoxSvg {
+                left: calc(36px + 18vw) !important;
+            }
+        }
+        
+        @media (min-width: 2560px) {
+            #moebeltaxi #heavyBoxSvg {
+                left: calc(36px + 18vw) !important;
+            }
+        }
+        
         @media (max-width: 991px) {
             #moebeltaxi #heavyBoxSvg {
                 display: none !important;

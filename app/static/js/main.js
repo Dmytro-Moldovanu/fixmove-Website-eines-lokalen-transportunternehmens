@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 // For contact section
                 else if (targetId === '#contact') {
-                    additionalOffset = -70;
+                    additionalOffset = -20;
                 }
                 
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + additionalOffset;

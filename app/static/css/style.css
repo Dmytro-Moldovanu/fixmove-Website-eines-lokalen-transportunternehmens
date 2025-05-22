@@ -377,8 +377,21 @@ textarea.form-control {
 
 @media (max-width: 768px) {
     .hero-section {
-        padding: 150px 0;
+        padding: 70px 0;
         text-align: center;
+        height: 110vh;
+        min-height: 110vh;
+        display: flex;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    
+    .hero-section .container {
+        padding-bottom: 60px;
     }
     
     .hero-section .col-lg-6:first-child {
@@ -392,6 +405,18 @@ textarea.form-control {
     
     .hero-section .lead {
         font-size: 1.2rem;
+    }
+
+    /* Add specific rule for contact section */
+    #contact {
+        scroll-margin-top: 20px;
+        padding-bottom: 80px !important;
+        padding-top: 60px !important;
+    }
+    
+    /* Ensure the contact form container has enough padding */
+    #contact .container {
+        padding-bottom: 30px;
     }
 }
 
@@ -551,6 +576,21 @@ textarea.form-control {
     
     .feature-item {
         width: 98% !important;
+    }
+    
+    .hero-section {
+        padding: 50px 0;
+        height: 110vh;
+        min-height: 650px;
+        background-position: center 30%;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.1rem;
     }
 }
 
@@ -910,26 +950,73 @@ textarea.form-control {
     /* Anpassung der Fotoposition für mobile Bildschirme */
     #moto-fan:hover .fan-photo-item:nth-child(1),
     #equip-fan:hover .fan-photo-item:nth-child(1) {
-        transform: translate3d(-180px, 0, 0) !important;
+        transform: translate3d(-120px, 0, 0) !important;
     }
     
     #moto-fan:hover .fan-photo-item:nth-child(2),
     #equip-fan:hover .fan-photo-item:nth-child(2) {
-        transform: translate3d(-60px, 0, 0) !important;
+        transform: translate3d(-40px, 0, 0) !important;
     }
     
     #moto-fan:hover .fan-photo-item:nth-child(3),
     #equip-fan:hover .fan-photo-item:nth-child(3) {
-        transform: translate3d(60px, 0, 0) !important;
+        transform: translate3d(40px, 0, 0) !important;
     }
     
     #moto-fan:hover .fan-photo-item:nth-child(4),
     #equip-fan:hover .fan-photo-item:nth-child(4) {
-        transform: translate3d(180px, 0, 0) !important;
+        transform: translate3d(120px, 0, 0) !important;
+    }
+    
+    /* Reduzierter Abstand für Möbeltaxi Fotos */
+    #moebel-fan:hover .fan-photo-item:nth-child(1),
+    #umzug-fan:hover .fan-photo-item:nth-child(1) {
+        transform: translate3d(-80px, 0, 0) !important;
+        z-index: 1;
+    }
+    
+    #moebel-fan:hover .fan-photo-item:nth-child(2),
+    #umzug-fan:hover .fan-photo-item:nth-child(2) {
+        transform: translate3d(80px, 0, 0) !important;
+        z-index: 2;
     }
     
     .fan-photo-item:hover {
         transform: translate3d(0, -20px, 0) scale(1.15) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Noch engere Abstände für sehr kleine Bildschirme - Motorradtransport */
+    #moto-fan:hover .fan-photo-item:nth-child(1),
+    #equip-fan:hover .fan-photo-item:nth-child(1) {
+        transform: translate3d(-90px, 0, 0) !important;
+    }
+    
+    #moto-fan:hover .fan-photo-item:nth-child(2),
+    #equip-fan:hover .fan-photo-item:nth-child(2) {
+        transform: translate3d(-30px, 0, 0) !important;
+    }
+    
+    #moto-fan:hover .fan-photo-item:nth-child(3),
+    #equip-fan:hover .fan-photo-item:nth-child(3) {
+        transform: translate3d(30px, 0, 0) !important;
+    }
+    
+    #moto-fan:hover .fan-photo-item:nth-child(4),
+    #equip-fan:hover .fan-photo-item:nth-child(4) {
+        transform: translate3d(90px, 0, 0) !important;
+    }
+    
+    /* Noch engere Abstände für sehr kleine Bildschirme - Möbeltaxi */
+    #moebel-fan:hover .fan-photo-item:nth-child(1),
+    #umzug-fan:hover .fan-photo-item:nth-child(1) {
+        transform: translate3d(-60px, 0, 0) !important;
+    }
+    
+    #moebel-fan:hover .fan-photo-item:nth-child(2),
+    #umzug-fan:hover .fan-photo-item:nth-child(2) {
+        transform: translate3d(60px, 0, 0) !important;
     }
 }
 
@@ -1029,6 +1116,11 @@ textarea.form-control {
         object-fit: cover !important;
         display: block !important;
         margin: 0 auto !important;
+    }
+    
+    #contact {
+        scroll-margin-top: 30px;
+        padding-bottom: 50px !important;
     }
 }
 
@@ -1312,6 +1404,11 @@ html {
         object-fit: cover !important;
         display: block !important;
         margin: 0 auto !important;
+    }
+    
+    #contact {
+        scroll-margin-top: 30px;
+        padding-bottom: 50px !important;
     }
 }
 
