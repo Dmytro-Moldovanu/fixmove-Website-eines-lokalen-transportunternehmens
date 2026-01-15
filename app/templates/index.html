@@ -3,27 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Daniely Transporte - Zuverlässige Transporte in ganz Deutschland</title>
+    <title>FixMove - Zuverlässige Transporte in ganz Deutschland</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            if (typeof emailjs === 'undefined') {
-                console.error('EmailJS not loaded');
-                return;
-            }
-            try {
-                emailjs.init("HDkfTM23gfmDWw3oG");
-            } catch (error) {
-                console.error('Failed to initialize EmailJS:', error);
-            }
-        })();
-    </script>
     <style>
         :root {
             --container-padding: 15px;
@@ -569,7 +554,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Daniely Transporte</a>
+            <a class="navbar-brand" href="#">FixMove</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -808,7 +793,7 @@
     <section id="contact" class="py-5 position-relative" style="margin-top: -5px;">
         <div class="bg-image-overlay contact-overlay"></div>
         <div class="container position-relative">
-            <h2 class="text-center mb-5" style="text-shadow: 2px 2px 3px rgba(0,0,0,0.2);">Kontaktieren Sie uns</h2>
+            <h2 class="text-center mb-5" style="text-shadow: 2px 2px 3px rgba(0,0,0,0.2);">Kontaktieren Sie uns (Aus Sicherheitsgründen ist der E-Mail-Versand über diese Website derzeit deaktiviert)</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <form id="contactForm" onsubmit="return sendEmail(event)">
@@ -985,21 +970,21 @@
                     <div class="row">
                         <div class="col-md-7 pe-4">
                             <h5>Kontakt</h5>
-                            <p class="mb-1">Telefon/WhatsApp: <span style="color: white;">+491629394390</span>
-                            <p>Email: <span style="color: white;">DanielyTransporte@yahoo.com</span>
-                            <p class="mb-1">Straße: <span style="color: white;">Mittelstraße 15</span>
-                            <p class="mb-1">PLZ:  <span style="color: white;">86153 Augsburg</span>
+                            <p class="mb-1">Telefon/WhatsApp: <span style="color: white;">+4917681326905</span>
+                            <p>Email: <span style="color: white;">Dmytro.moldovanu@gmail.com</span>
+                            <p class="mb-1">Straße: <span style="color: white;">MusterStraße 123</span>
+                            <p class="mb-1">PLZ:  <span style="color: white;">86157 Augsburg</span>
                             <p class="mb-1">Land:  <span style="color: white;">Deutschland</span>
                         </div>
                         <div class="col-md-5">
                             <h5>Geschäftsinformationen</h5>
-                            <p class="mb-1">Inhaber: <span style="color: white;">Gornostali Vitalie</span>
-                            <p class="mb-1">Steuernummer: <span style="color: white;">103/221/71620</span>
+                            <p class="mb-1">Inhaber: <span style="color: white;">Moldovanu Dmytro</span>
+                            <p class="mb-1">Steuernummer: <span style="color: white;">123/456/78910 </span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0 d-inline-block">&copy; 2024 Daniely Transporte. Alle Rechte vorbehalten.</p>
+                    <p class="mb-0 d-inline-block">&copy; 2025 FixMove. Alle Rechte vorbehalten.</p>
                     <button type="button" class="btn btn-link p-0 ms-3 align-baseline" data-bs-toggle="modal" data-bs-target="#privacyModal" style="color:#fff; text-decoration:underline; font-weight:500;">Datenschutzerklärung</button>
                     <a href="#" id="open_preferences_center" style="color:#fff; text-decoration:underline; font-weight:500; margin-left:20px;">Cookie-Einstellungen</a>
                 </div>
@@ -1015,20 +1000,23 @@
 
         <div class="whatsapp-chat-bubble" id="chatBubble">
             <div class="whatsapp-chat-header">
-                <img src="{{ url_for('static', filename='images/Fahrzeug2.png') }}" onerror="this.src='https://via.placeholder.com/40x40/128C7E/FFFFFF?text=DT'" alt="Daniely Transporte">
+                <img src="{{ url_for('static', filename='images/DmytroMoldovanu.jpg') }}" onerror="this.src='https://via.placeholder.com/40x40/128C7E/FFFFFF?text=DT'" alt="Dmytro Moldovanu">
                 <div class="whatsapp-chat-header-info">
-                    <h4>Daniely Transporte</h4>
+                    <h4>Dmytro Moldovanu<br>
+                    </h4>
                     <p>Online</p>
                 </div>
             </div>
             <div class="whatsapp-chat-body">
                 <div class="whatsapp-message received">
-                    <div>Hallo! Wie kann ich dir mit deinem Transport helfen?</div>
+                    <div>Hallo!👋
+                        Die Website habe ich gebaut, um meine Motivation und mein Interesse an der Arbeit zu zeigen.
+                        Ich suche aktuell einen Job und freue mich, wenn Sie mir schreiben😊</div>
                     <div class="whatsapp-message-time">10:42</div>
                 </div>
             </div>
             <div class="whatsapp-chat-footer">
-                <a href="https://wa.me/491629394390" target="_blank" style="display:inline-block;">Bei WhatsApp fortsetzen</a>
+                <a href="https://wa.me/4917681326905" target="_blank" style="display:inline-block;">Bei WhatsApp fortsetzen</a>
             </div>
         </div>
     </div>
@@ -1051,13 +1039,13 @@ Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir behand
 
 Verantwortlich für die Datenverarbeitung auf dieser Website:
 
-Gornostali Vitalie
-Mittelstraße 15
-86153 Augsburg
+Moldovanu Dmytro
+MusterStraße 123
+86157 Augsburg
 Bayern, Deutschland
 
-📞 +49 162 9394390
-✉️ E-Mail: DanielyTransporte@yahoo.com
+📞 +49 176 81326905
+✉️ E-Mail: Dmytro.moldovanu@gmail.com
 
 3. Rechtsgrundlagen der Datenverarbeitung
 
@@ -1173,7 +1161,7 @@ Letzte Aktualisierung: 21.05.2024
                 "notice_banner_reject_button_hide": false,
                 "preferences_center_close_button_hide": false,
                 "page_refresh_confirmation_buttons": false,
-                "website_name": "Daniely Transporte",
+                "website_name": "FixMove",
                 "colors": {
                     "popup": { "background": "#e3f2fd", "text": "#0d6efd" },
                     "button": { "background": "#0d6efd", "text": "#fff", "border": "#0d6efd" }
@@ -1217,31 +1205,24 @@ Letzte Aktualisierung: 21.05.2024
         }
 
         var statusElement = document.getElementById('emailStatus');
-        statusElement.className = 'alert alert-info my-3';
-        statusElement.textContent = 'Nachricht wird gesendet...';
-
         var form = document.getElementById('contactForm');
+        
         if (!form) {
             statusElement.className = 'alert alert-danger my-3';
             statusElement.textContent = 'Fehler: Formular nicht gefunden';
-            console.error('Form not found');
             return false;
         }
 
-        emailjs.sendForm('service_5ib3fgs', 'template_ct7hwxz', form)
-            .then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
-                statusElement.className = 'alert alert-success my-3';
-                statusElement.textContent = 'Nachricht erfolgreich gesendet!';
-                form.reset();
-            }, function(error) {
-                console.error('FAILED...', error);
-                statusElement.className = 'alert alert-danger my-3';
-                statusElement.innerHTML = 'Fehler beim Senden:<br>' +
-                    'Status: ' + (error.status || 'unbekannt') + '<br>' +
-                    'Text: ' + (error.text || 'unbekannt') + '<br>' +
-                    'Details: ' + JSON.stringify(error, null, 2);
-            });
+        // Демонстрационный режим - форма не отправляет email
+        statusElement.className = 'alert alert-info my-3';
+        statusElement.textContent = 'Dies ist eine Demo-Website. Das Formular sendet keine E-Mails.';
+        
+        // Очистка формы после небольшой задержки для демонстрации
+        setTimeout(function() {
+            form.reset();
+            statusElement.className = 'alert alert-success my-3';
+            statusElement.textContent = 'Formular erfolgreich ausgefüllt (Demo-Modus)';
+        }, 1500);
 
         return false;
     }
