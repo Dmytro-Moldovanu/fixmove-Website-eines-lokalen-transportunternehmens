@@ -6,6 +6,12 @@ https://dmytro-moldovanu.github.io/FixMove-Website-eines-lokalen-Transportuntern
 
 ---
 
+## Screenshots
+
+![](screenshot1.jpg)
+![](screenshot2.jpg)
+![](screenshot3.jpg)
+
 ## Projektbeschreibung
 
 Dies ist eine moderne und responsive Website für ein lokales Transportunternehmen mit Sitz in Augsburg.  
