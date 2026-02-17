@@ -21,6 +21,16 @@ Das Projekt wurde mit Fokus auf klare Struktur, sauberen Code und praxisnahe Web
 
 ---
 
+## Technische Umsetzung ohne Abonnements
+
+Die Website wurde vollständig ohne kostenpflichtige Abonnements, Baukastensysteme oder externe Plugins entwickelt.
+Alle Funktionen – einschließlich Datenschutzerklärung, Kontaktformular sowie WhatsApp-Kontaktintegration – wurden eigenständig und manuell umgesetzt.
+
+Dabei wurde bewusst auf Drittanbieter-Dienste und Abo-Lösungen verzichtet, um volle Kontrolle über Struktur, Funktionalität und Datenschutz zu behalten.
+Das Projekt basiert ausschließlich auf eigener Entwicklung, sauberer Code-Struktur und frei verfügbaren Webtechnologien.
+
+---
+
 ## Funktionen
 
 - Responsives Webdesign für Desktop- und Mobilgeräte  
