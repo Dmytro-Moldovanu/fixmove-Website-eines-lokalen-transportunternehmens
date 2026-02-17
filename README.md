@@ -2,7 +2,7 @@
 
 ## 🌐 Live Demo
 Die Website kann hier direkt online angesehen werden:  
-https://dmytro-moldovanu.github.io/FixMove-Website-eines-lokalen-Transportunternehmens/
+https://dmytro-moldovanu.github.io/fixmove-Website-eines-lokalen-transportunternehmens/
 
 ---
 
