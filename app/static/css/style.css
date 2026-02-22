@@ -245,31 +245,6 @@ section {
 }
 
 /* Allgemeine Stile */
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.navbar {
-    height: 80px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-blue) !important;
-}
-
-.nav-link {
-    color: var(--primary-blue) !important;
-    font-weight: 500;
-}
-
 .btn-primary {
     background-color: var(--primary-blue);
     border-color: var(--primary-blue);
@@ -454,20 +429,6 @@ textarea.form-control {
     flex-wrap: nowrap;
     padding: 20px 0;
     width: 100%;
-}
-
-.truck-image-wrapper {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    width: 450px;
-    height: 360px;
-}
-
-.truck-image-wrapper:hover {
-    transform: scale(1.05);
 }
 
 .truck-image {
@@ -698,33 +659,6 @@ textarea.form-control {
     #services .feature-item:nth-child(4) {
         margin-left: 0;
     }
-}
-
-#scrollToTop {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-#scrollToTop:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-#scrollToTop svg {
-    width: 20px;
-    height: 20px;
 }
 
 /* Responsive Abstände und Größen */
@@ -1020,7 +954,10 @@ textarea.form-control {
     }
 }
 
-/* Stile für die Sektion Möbeltaxi und Umzüge */#moebeltaxi {    scroll-margin-top: 90px;}
+/* Stile für die Sektion Möbeltaxi und Umzüge */
+#moebeltaxi {
+    scroll-margin-top: 90px;
+}
 
 /* Stile für die IDs der neuen Collagen mit zwei Fotos */
 #moebel-fan .fan-photo-item:nth-child(1),
@@ -1227,7 +1164,7 @@ textarea.form-control {
 
 @media (min-width: 1920px) and (max-width: 2559px) {
     #contact {
-        scroll-margin-top: 80px; /* Decreased scroll margin for contact section at 1920x1080 */
+        scroll-margin-top: 150px; /* Decreased scroll margin for contact section at 1920x1080 */
     }
 }
 
@@ -1237,36 +1174,6 @@ html {
     -webkit-overflow-scrolling: touch;
 }
 
-/* Optimize animations */
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-/* Optimize SVG transitions */
-#travelingSvg, #heavyBoxSvg, #aboutSvg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 20.83vw;
-    height: auto;
-    opacity: 0.8;
-    z-index: 1;
-    transition: all 0.3s ease;
-    max-width: 400px;
-    min-width: 250px;
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
 /* Optimize fan photo animations */
 .fan-photo-item {
     will-change: transform;
@@ -1274,249 +1181,6 @@ html {
     -webkit-backface-visibility: hidden;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
-}
-
-/* Optimize scroll to top button */
-#scrollToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-}
-
-#scrollToTop:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-#scrollToTop svg {
-    width: 20px;
-    height: 20px;
-}
-
-/* Stile für die Sektion Möbeltaxi und Umzüge */#moebeltaxi {    scroll-margin-top: 90px;}
-
-/* Stile für die IDs der neuen Collagen mit zwei Fotos */
-#moebel-fan .fan-photo-item:nth-child(1),
-#umzug-fan .fan-photo-item:nth-child(1) {
-    transform: translate3d(-24px, -12px, 0) !important;
-    z-index: 2;
-}
-
-#moebel-fan .fan-photo-item:nth-child(2),
-#umzug-fan .fan-photo-item:nth-child(2) {
-    transform: translate3d(24px, 0, 0) !important;
-    z-index: 1;
-}
-
-/* Animation beim Hover für neue Collagen mit zwei Fotos */
-#moebel-fan:hover .fan-photo-item:nth-child(1),
-#umzug-fan:hover .fan-photo-item:nth-child(1) {
-    transform: translate3d(-100px, 0, 0) !important;
-    z-index: 1;
-}
-
-#moebel-fan:hover .fan-photo-item:nth-child(2),
-#umzug-fan:hover .fan-photo-item:nth-child(2) {
-    transform: translate3d(100px, 0, 0) !important;
-    z-index: 2;
-}
-
-.section-padding {
-    padding-top: 100px !important;
-    margin-top: 0;
-    border-top: 0;
-}
-
-#about .truck-images-container {
-    width: 120%;
-    margin-left: -10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0;
-    padding-left: 4vw;
-    padding-right: 4vw;
-}
-
-#about .truck-image-wrapper {
-    margin-left: -45px;
-    margin-right: -45px;
-    width: 225px;
-    height: 360px;
-}
-
-#about .feature-item {
-    width: 265px !important;
-    max-width: 25vw;
-    min-width: 130px;
-    margin: 0;
-}
-
-@media (max-width: 768px) {
-    #about .truck-images-container {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        width: 100vw !important;
-        margin-left: 0 !important;
-        gap: 5px !important;
-        padding: 0 !important;
-    }
-    #about .feature-item,
-    #about .truck-image-wrapper {
-        margin: 0 !important;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-    #about .truck-image-wrapper {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        width: 90vw !important;
-        max-width: 100vw !important;
-        height: auto !important;
-        margin: 0 auto 5px auto !important;
-        left: 0 !important;
-        right: 0 !important;
-        transform: none !important;
-        box-sizing: border-box !important;
-    }
-    #about .truck-image-wrapper img.truck-image {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        object-fit: cover !important;
-        display: block !important;
-        margin: 0 auto !important;
-    }
-    
-    #contact {
-        scroll-margin-top: 30px;
-        padding-bottom: 50px !important;
-    }
-}
-
-/* SVG Styles */
-#travelingSvg, #heavyBoxSvg, #aboutSvg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 20.83vw; /* 400px at 1920px viewport width */
-    height: auto;
-    opacity: 0.8;
-    z-index: 1;
-    transition: all 0.3s ease;
-    max-width: 400px; /* Maximum size at 1920px */
-    min-width: 250px; /* Minimum size to maintain visibility */
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-/* Responsive styles for SVG images */
-@media (min-width: 2560px) {
-    #travelingSvg, #heavyBoxSvg, #aboutSvg {
-        width: 500px; /* Larger size for 2560x1440 */
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 2559px) {
-    #travelingSvg, #heavyBoxSvg, #aboutSvg {
-        width: 400px; /* Fixed size for large screens */
-    }
-}
-
-@media (max-width: 1919px) and (min-width: 1440px) {
-    #travelingSvg, #heavyBoxSvg, #aboutSvg {
-        width: 350px; /* Slightly smaller for medium-large screens */
-    }
-}
-
-@media (max-width: 1439px) and (min-width: 1024px) {
-    #travelingSvg, #heavyBoxSvg, #aboutSvg {
-        width: 300px; /* Medium size for medium screens */
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 768px) {
-    #travelingSvg, #heavyBoxSvg, #aboutSvg {
-        width: 250px; /* Smaller size for tablets */
-    }
-}
-
-@media (max-width: 767px) {
-    #travelingSvg, #heavyBoxSvg, #aboutSvg {
-        display: none; /* Hide on mobile devices */
-    }
-}
-
-/* Specific positioning for each SVG */
-#services #travelingSvg {
-    bottom: 0;
-    left: 0;
-    transform: translateY(0);
-}
-
-#moebeltaxi #heavyBoxSvg {
-    bottom: 0;
-    left: 0;
-    transform: translateY(0);
-}
-
-#about #aboutSvg {
-    bottom: 0;
-    left: 0;
-    transform: translateY(0);
-    margin-left: -150px; /* Move SVG to the left using margin */
-}
-
-@media (min-width: 2560px) {
-    #services #travelingSvg,
-    #moebeltaxi #heavyBoxSvg,
-    #about #aboutSvg {
-        margin-left: 40%; /* Move all SVGs to the right */
-    }
-    
-    #services #travelingSvg {
-        margin-left: 8%; /* Move first SVG 8% to the right */
-    }
-
-    #moebeltaxi #heavyBoxSvg {
-        margin-left: 7%; /* Move second SVG 7% to the right */
-    }
-
-    #about #aboutSvg {
-        margin-left: 2%; /* Move third SVG 2% to the right */
-    }
-}
-
-/* Container styles to ensure proper SVG positioning */
-#services, #moebeltaxi, #about {
-    position: relative;
-    overflow: hidden;
-    min-height: 400px; /* Ensure minimum height for SVG visibility */
-}
-
-@media (min-width: 1920px) and (max-width: 2559px) {
-    #contact {
-        scroll-margin-top: 80px; /* Decreased scroll margin for contact section at 1920x1080 */
-    }
 }
 
 @media (min-width: 2560px) {

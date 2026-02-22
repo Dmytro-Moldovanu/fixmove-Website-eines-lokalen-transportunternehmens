@@ -3,6 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
+            if (this.classList.contains('navbar-brand')) {
+                // FixMove logo – scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
+                return;
+            }
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
@@ -11,15 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Special adjustment for services section
                 if (targetId === '#services') {
-                    additionalOffset = -navbarHeight;
+                    additionalOffset = -7;
                 }
                 // For möbeltaxi section
                 else if (targetId === '#moebeltaxi') {
-                    additionalOffset = -navbarHeight - 0;
+                    additionalOffset = -5;
                 }
                 // For about section
                 else if (targetId === '#about') {
-                    additionalOffset = -navbarHeight - 0;
+                    additionalOffset = -5;
                 }
                 // For contact section
                 else if (targetId === '#contact') {
@@ -71,8 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Scroll to top button functionality
     const scrollToTopButton = document.getElementById('scrollToTop');
-    
-    // Hide button on page load
+    if (!scrollToTopButton) return;
+
     scrollToTopButton.style.display = 'none';
 
     window.addEventListener('scroll', () => {
